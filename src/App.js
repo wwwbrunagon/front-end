@@ -21,10 +21,8 @@ function App() {
             English
           </button>   
         </nav>
-        <header className="App-header">
-          
-          <h3>{t('Thanks.1')}</h3>  <h3>{t('Why.1')}</h3> 
-          
+        <header className="App-header">          
+          <h3>{t('Thanks.1')}</h3>  <h3>{t('Why.1')}</h3>           
         </header>
     </div>
   );

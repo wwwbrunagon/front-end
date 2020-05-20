@@ -1,10 +1,8 @@
- 
-
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
-import './i18n';
+// eslint-disable-next-line
+import Bootstrap from 'bootstrap/dist/css/bootstrap.css';
 
 
 ReactDOM.render(

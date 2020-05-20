@@ -1,30 +1,29 @@
 
-import React from 'react';
+import React, { useState }from 'react';
+import { I18nProvider, LOCALES} from './i18n/';
+import translate from './i18n/translate';
 
-import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
+
 
 function App() {
-  const { t } = useTranslation();
-
-  function handleClick(lang) {
-    i18next.changeLanguage(lang)
-  }
-
+  const[locale, setLocale] = useState(LOCALES.ENGLISH);
   return (
-    <div className="App">
-        <nav style={{ width: '100%', padding: '2rem 0', backgroundColor:'gray' }}>
-        <button onClick={()=>handleClick('pt')} >
-            Portugues
-          </button>
-          <button onClick={()=>handleClick('en')} >
-            English
-          </button>   
-        </nav>
-        <header className="App-header">          
-          <h3>{t('Thanks.1')}</h3>  <h3>{t('Why.1')}</h3>           
-        </header>
-    </div>
+    <>
+    <I18nProvider locale={locale}>
+      <div className="container p-3">
+      <button onClick={() => setLocale(LOCALES.ENGLISH)}>PORTUGUES</button>
+      <button onClick={() => setLocale(LOCALES.PORTUGUESE)}>ENGLISH</button>
+      </div>
+      <div className="container  p-3">
+        {translate("hello")}
+      </div>
+        
+      <div className="container mt-3" >
+        {translate('edit', {path:'JavaScript'})}
+      </div> 
+    </I18nProvider>
+
+    </>
   );
 }
 

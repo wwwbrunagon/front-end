@@ -1,4 +1,4 @@
-import { LOCALES } from '../loacales'
+import { LOCALES } from '../../loacales'
 
 export default {
     [LOCALES.ENGLISH]:{

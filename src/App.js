@@ -27,7 +27,7 @@ function App() {
         {translate('edit', {path:'JavaScript'})}
       </div> 
     </I18nProvider>
-    <div className="container align-self-start mr-3">
+    <div className="container m-3">
       <button onClick={() => setThemeName(THEMES.DARK)}>DARK</button>
       <button onClick={() => setThemeName(THEMES.LIGHT)}>LIGHT</button>
     </div>

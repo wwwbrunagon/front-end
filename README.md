@@ -4,3 +4,4 @@
 * React-intl (i18n) 
 * Styled components (themeProvider)
 * React-bootstrap
+* Fetch api
